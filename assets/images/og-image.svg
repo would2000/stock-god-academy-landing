@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="股神修練院 — 用放置 RPG 的方式，開始你的股票修練之路">
+  <title>股神修練院 — 社群分享圖</title>
+  <!-- Design source for the Open Graph share image.
+       Export this to assets/images/og-image.png at exactly 1200x630
+       (PNG/JPG; most social scrapers do NOT render SVG og:image). -->
+  <defs>
+    <linearGradient id="base" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0c1322"/>
+      <stop offset="0.5" stop-color="#0c1220"/>
+      <stop offset="1" stop-color="#120f15"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="0.82" cy="-0.05" r="0.7">
+      <stop offset="0" stop-color="#e8c57b" stop-opacity="0.18"/>
+      <stop offset="0.6" stop-color="#e8c57b" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0.05" cy="0.9" r="0.7">
+      <stop offset="0" stop-color="#966e3c" stop-opacity="0.16"/>
+      <stop offset="0.6" stop-color="#966e3c" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fdf3da"/>
+      <stop offset="0.55" stop-color="#e2c079"/>
+      <stop offset="1" stop-color="#b88f44"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#base)"/>
+  <rect width="1200" height="630" fill="url(#glowA)"/>
+  <rect width="1200" height="630" fill="url(#glowB)"/>
+  <rect x="20" y="20" width="1160" height="590" rx="28"
+        fill="none" stroke="#e2c079" stroke-opacity="0.28" stroke-width="2"/>
+
+  <!-- Eyebrow -->
+  <text x="100" y="208" font-family="'Noto Sans TC',sans-serif" font-size="30"
+        letter-spacing="8" fill="#e2c079" font-weight="700">奇幻股票學習放置 RPG</text>
+
+  <!-- Title -->
+  <text x="96" y="330" font-family="'Noto Serif TC',serif" font-size="118"
+        font-weight="900" fill="url(#gold)">股神修練院</text>
+
+  <!-- Subtitle -->
+  <text x="100" y="402" font-family="'Noto Sans TC',sans-serif" font-size="38"
+        fill="#eef1f7" font-weight="500">用放置 RPG 的方式，開始你的股票修練之路</text>
+
+  <!-- Disclaimer line -->
+  <text x="100" y="470" font-family="'Noto Sans TC',sans-serif" font-size="24"
+        fill="#aab3c5">學習與娛樂用途 · 不構成投資建議 · 不會真實下單</text>
+
+  <!-- Candlestick chart motif -->
+  <g transform="translate(840 360)">
+    <g stroke="url(#gold)" stroke-width="6" stroke-linecap="round">
+      <line x1="0" y1="40" x2="0" y2="120"/>
+      <line x1="60" y1="-20" x2="60" y2="90"/>
+      <line x1="120" y1="-70" x2="120" y2="40"/>
+      <line x1="180" y1="-130" x2="180" y2="10"/>
+    </g>
+    <g fill="url(#gold)">
+      <rect x="-16" y="40" width="32" height="60" rx="6"/>
+      <rect x="44" y="-10" width="32" height="80" rx="6"/>
+      <rect x="104" y="-60" width="32" height="80" rx="6"/>
+      <rect x="164" y="-120" width="32" height="100" rx="6"/>
+    </g>
+    <polyline points="-16,150 200,150" fill="none" stroke="#e2c079"
+              stroke-opacity="0.4" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- Brand mark -->
+  <g transform="translate(100 520)">
+    <rect width="52" height="52" rx="14" fill="#141c2f"
+          stroke="#e2c079" stroke-opacity="0.5" stroke-width="2"/>
+    <text x="26" y="37" font-family="'Noto Serif TC',serif" font-size="28"
+          text-anchor="middle" fill="#e2c079" font-weight="700">院</text>
+  </g>
+  <text x="170" y="554" font-family="'Noto Serif TC',serif" font-size="30"
+        fill="#eef1f7" font-weight="700">股神修練院</text>
+</svg>
