@@ -35,7 +35,7 @@ stock-god-academy-landing
 │  │  ├─ og-image.svg  # OG 分享圖「設計原稿」
 │  │  ├─ og-image.png  # ✅ 正式 OG 分享圖 1731×909（≈1.91:1），四頁已接線
 │  │  ├─ hero          # 首頁 hero 主視覺
-│  │  │  └─ hero-login-screen.png  # 1754×897，含標題/副標/手機/兩顆 CTA
+│  │  │  └─ hero-banner.png        # 1794×876，整張主視覺 banner（無 CTA）
 │  │  └─ features      # 六大特色卡「可選」實圖落點（預設純 CSS，見下方）
 │  └─ screenshots      # 正式遊戲截圖（已加入，見下方說明）
 └─ docs
@@ -44,45 +44,27 @@ stock-god-academy-landing
 
 ## 目前狀態
 
-- ✅ 封測報名網址已設定：`https://reurl.cc/YDRAxl`（所有 `[data-beta-cta]` 按鈕，新分頁開啟）
+- ✅ 封測報名網址已設定：`https://forms.gle/QdE8Z8xVG24DybPx6`（所有 `[data-beta-cta]` 按鈕，新分頁開啟）
 - ✅ 法律／聯絡頁已建立：`privacy.html`、`terms.html`、`contact.html`，footer 已串接
 - ✅ 隱私／條款內容改寫自遊戲專案內既有「法律聲明與隱私權政策」（內容一致）
 - ✅ 官方截圖已接線：`battle/market/record/ladder.png`（1080×1920），首頁 showcase 以實機畫面呈現
 - ✅ OG 分享圖已接線：`assets/images/og-image.png`（1731×909），index 及三個子頁一致
 - ✅ 整站背景升級為「黑夜書院金色修練氛圍」；六大特色卡各有獨立 CSS 藝術背景
 - ✅ favicon 已接線（`assets/images/favicon.svg`，四頁一致）
-- ✅ 首頁 hero 改為整張主視覺圖 + 透明 CTA hotspot（行動版改顯示真實按鈕列）
+- ✅ 首頁 hero 為單張主視覺 banner（純展示，CTA 由導覽列與底部按鈕承擔）
 
 ---
 
-## 首頁 Hero（baked 圖 + 功能性 hotspot）
+## 首頁 Hero（純展示 banner）
 
-Hero 區為單張主視覺 `assets/images/hero/hero-login-screen.png`（1754×897）。
-**圖內已畫死標題、副標、手機 mockup 與兩顆按鈕**，視覺即圖本身（桌機不再
-另疊文字/按鈕，避免重複）。可點性由兩個**透明 `<a>` hotspot** 疊在圖中按鈕
-位置提供：
+Hero 區為單張主視覺 banner `assets/images/hero/hero-banner.png`（1794×876）。
+**圖內已包含標題、副標、英雄群像與遊戲實機畫面**，無 CTA 按鈕；轉換點由
+導覽列「參加封測」與頁面底部「準備好了，前往封測」按鈕承擔。
 
-| hotspot | 連結 | aria-label |
-|---|---|---|
-| `.hero-hotspot--beta` | `https://reurl.cc/YDRAxl`（`data-beta-cta`，新分頁） | 參加股神修練院封測 |
-| `.hero-hotspot--features` | `#features` | 查看股神修練院遊戲特色 |
-
-- hotspot 為真實 `<a>`、可 Tab 聚焦；`:focus-visible` 顯示金色外框 +
-  外光暈；指標 hover 顯示淡金底；`min-height:44px` 確保觸控面積。
-- hotspot 以**百分比**定位於 `.hero-figure`（精確包住圖、長寬鎖定），
-  故各尺寸下都對齊圖中按鈕。預設座標：beta `left:3.6% width:9.4%`、
-  features `left:13.2% width:12.4%`、`top:64.5% height:9%`。
-- **行動版（≤640px）**：圖中按鈕太小、hotspot 對齊不可靠，故 hotspot
-  隱藏，改在圖下方顯示一列**真實可見按鈕**（`.hero-mobile-cta`，沿用
-  `.btn` 樣式，同樣連到 reurl / `#features`）— 即 Option A。
-
-**日後更換 hero 圖**：覆蓋 `assets/images/hero/hero-login-screen.png`。
-- 若新圖**尺寸或按鈕位置改變**，務必同步調整 `styles.css` 內
-  `.hero-hotspot--beta` / `--features` 的 `left/width` 與共用 `top/height`
-  百分比，使其對齊新圖按鈕（用瀏覽器開發者工具量測即可）。
-- 建議維持近似長寬比（約 1.95:1）；過高則行動版圖會過小，依賴下方
-  `.hero-mobile-cta` 真實按鈕即可維持可用性。
-- 同步更新 `<img>` 的 `width`/`height` 屬性（防 CLS）。
+**日後更換 hero 圖**：覆蓋 `assets/images/hero/hero-banner.png` 即可。
+- 同步更新 [`index.html`](index.html) 內 `<img>` 的 `width` / `height` 屬性
+  為新圖實際尺寸（防 CLS）。
+- 建議維持近似長寬比（約 2:1），保持頁面整體節奏一致。
 - ✅ OG 圖已完成：`og-image.png`（1731×909）已接線於 index 及三子頁
 
 ---
@@ -100,8 +82,9 @@ Hero 區為單張主視覺 `assets/images/hero/hero-login-screen.png`（1754×89
 設計原稿保留於 `assets/images/og-image.svg`。
 - 已接線頁面：`index.html`、`privacy.html`、`terms.html`、`contact.html`
   （`og:image` + `twitter:image`，並附 `og:image:type/width/height/alt`）。
-- 路徑為相對路徑（GitHub Pages 相容）。**部署到固定網域後**，建議把
-  `og:image` / `twitter:image` 改成**絕對網址**（部分爬蟲不解析相對路徑）。
+- ✅ `og:image` / `twitter:image` 已使用**絕對網址**
+  `https://would2000.github.io/stock-god-academy-landing/assets/images/og-image.png`
+  （爬蟲支援度最佳；`TODO(og-abs-url)` 已完成）。如日後改網域，需同步更新四頁此網址。
 - 更換分享圖：覆蓋 `og-image.png` 同名檔；若尺寸改變，記得同步更新四頁的
   `og:image:width` / `og:image:height`。可由 `og-image.svg` 重新匯出。
 - ⏳ 仍待補：正式對外聯絡管道、footer 版權字、上線前法律複審
@@ -203,11 +186,11 @@ Hero 區手機 mockup 仍為 CSS 繪製，作為氛圍保留。
 
 | 項目 | 位置 | 標記 | 狀態 |
 |---|---|---|---|
-| 封測報名網址 | 所有 `[data-beta-cta]` `href` | — | ✅ 已設定 `https://reurl.cc/YDRAxl` |
+| 封測報名網址 | 所有 `[data-beta-cta]` `href` | — | ✅ 已設定 `https://forms.gle/QdE8Z8xVG24DybPx6` |
 | 隱私／條款／聯絡頁 | footer + `privacy/terms/contact.html` | — | ✅ 已建立並串接 |
 | 截圖接線 | `index.html` showcase 區 | — | ✅ 已完成（4 張實機畫面） |
 | OG 分享圖 PNG（1731×909） | `assets/images/og-image.png`（四頁已接線） | — | ✅ 已完成 |
-| 部署後改絕對網址 | 四頁 `og:image`/`twitter:image` | `TODO(og-abs-url)` | ⏳ 固定網域後處理 |
+| OG/Twitter 絕對網址 | 四頁 `og:image`/`twitter:image` | — | ✅ 已完成（GitHub Pages 網址） |
 | favicon | `assets/images/favicon.svg`（四頁已接線） | — | ✅ 已完成 |
 | 正式對外聯絡管道 | `contact.html` | `TODO(contact-method)` | ⏳ 待公布 |
 | 版權名稱／年份 | 各頁 footer | `TODO(copyright)` | ⏳ 待確認 |

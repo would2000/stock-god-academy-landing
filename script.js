@@ -70,7 +70,7 @@
   });
 
   /* ---- Beta CTA guard ----
-     Signup URL is configured (https://reurl.cc/YDRAxl), so this guard is
+     Signup URL is configured (https://forms.gle/QdE8Z8xVG24DybPx6), so this guard is
      a no-op in normal operation. It only trips as a safe fallback if a
      [data-beta-cta] href regresses to empty or "#", preventing a dead
      click that silently jumps to the top of the page. */

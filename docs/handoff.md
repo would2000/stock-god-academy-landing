@@ -45,12 +45,9 @@
 ## 4. 章節清單（index.html）
 
 1. Sticky 導覽（行動 hamburger）
-2. Hero — 單張 baked 主視覺 `assets/images/hero/hero-login-screen.png`
-   （1754×897，圖內含標題/副標/手機/兩顆 CTA）+ 兩個透明可聚焦
-   `<a>` hotspot（beta→reurl、features→#features，`:focus-visible`
-   金框、min 44px）；≤640px 隱藏 hotspot 改顯真實按鈕列
-   `.hero-mobile-cta`（Option A）。舊 CSS hero 版型保留但不再渲染。
-   換圖須同步調整 `.hero-hotspot--*` 百分比，詳見 README「首頁 Hero」。
+2. Hero — 單張主視覺 banner `assets/images/hero/hero-banner.png`
+   （1794×876，整張展示用 banner，無 CTA）。轉換點由導覽列「參加封測」
+   與底部「準備好了，前往封測」承擔。舊 CSS hero 版型保留但不再渲染。
 3. 信任／免責 strip
 4. 遊戲核心 — 3 張價值卡
 5. 遊戲特色 — 6 張特色卡（每張獨立藝術導向 CSS 背景，見 §4.1）
@@ -95,7 +92,7 @@
 
 已完成：
 
-- [x] 封測報名網址設定為 `https://reurl.cc/YDRAxl`（所有 `[data-beta-cta]`，新分頁）
+- [x] 封測報名網址設定為 `https://forms.gle/QdE8Z8xVG24DybPx6`（所有 `[data-beta-cta]`，新分頁）
 - [x] 隱私／使用條款／聯絡頁建立並串接 footer（全站一致）
 - [x] 法律文字改寫自遊戲專案既有「法律聲明與隱私權政策」，內容一致
 - [x] 官方截圖去除雙副檔名並接上 showcase（`battle/market/record/ladder.png`，1080×1920）
@@ -104,7 +101,7 @@
 
 上線前仍待：
 
-- [ ] 固定網域後將四頁 `og:image`/`twitter:image` 改為絕對網址 `TODO(og-abs-url)`
+- [x] 四頁 `og:image`/`twitter:image` 改為絕對網址（GitHub Pages：`https://would2000.github.io/stock-god-academy-landing/...og-image.png`）
 - [ ] （可選）為很舊瀏覽器補 32×32 `favicon.png/.ico` 後援 `TODO(favicon-fallback)`
 - [ ] 公布正式對外聯絡管道並更新 `contact.html` `TODO(contact-method)`
 - [ ] 確認 footer 版權名稱／年份 `TODO(copyright)`

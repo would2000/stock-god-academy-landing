@@ -17,15 +17,15 @@
   <meta property="og:description" content="在奇幻修練院中選股、培養英雄、累積知識，透過遊戲節奏熟悉股票市場概念。" />
   <!-- Final OG share image (1731x909, ~1.91:1, PNG). Design source kept
        at assets/images/og-image.svg. NOTE: when the site has a fixed
-       domain, switch og:image / twitter:image to an ABSOLUTE URL —
-       some scrapers don't resolve relative paths. -->
-  <meta property="og:image" content="assets/images/og-image.png" />
+       og:image / twitter:image use the absolute GitHub Pages URL
+       (best scraper support). -->
+  <meta property="og:image" content="https://would2000.github.io/stock-god-academy-landing/assets/images/og-image.png" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1731" />
   <meta property="og:image:height" content="909" />
   <meta property="og:image:alt" content="股神修練院 — 用放置 RPG 的方式，開始你的股票修練之路" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="assets/images/og-image.png" />
+  <meta name="twitter:image" content="https://would2000.github.io/stock-god-academy-landing/assets/images/og-image.png" />
   <meta name="twitter:image:alt" content="股神修練院 — 用放置 RPG 的方式，開始你的股票修練之路" />
 
   <!-- On-brand SVG favicon (modern browsers). TODO(favicon-fallback):
@@ -71,52 +71,18 @@
 
   <main id="main">
 
-    <!-- ===== 1. Hero (baked image + functional hotspot anchors) ===== -->
+    <!-- ===== 1. Hero (banner image only) ===== -->
     <section class="hero-image-section" aria-label="股神修練院主視覺">
       <div class="hero-figure">
         <img
-          src="assets/images/hero/hero-login-screen.png"
-          alt="股神修練院宣傳主視覺，展示遊戲登入畫面與封測入口"
+          src="assets/images/hero/hero-banner.png"
+          alt="股神修練院宣傳主視覺：奇幻像素英雄與遊戲實機畫面，主題為股票掛機遊戲，放置戰鬥 × 股市策略 × 英雄養成"
           class="hero-art-image"
-          width="1754"
-          height="897"
+          width="1794"
+          height="876"
           fetchpriority="high"
           decoding="async"
         />
-        <!-- Transparent anchors aligned over the buttons baked into the
-             image. Real <a> elements: keyboard-focusable, visible focus
-             ring. Hidden on small screens (see .hero-mobile-cta fallback). -->
-        <a
-          class="hero-hotspot hero-hotspot--beta"
-          href="https://reurl.cc/YDRAxl"
-          data-beta-cta
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="參加股神修練院封測"
-        ><span class="visually-hidden">參加封測</span></a>
-        <a
-          class="hero-hotspot hero-hotspot--features"
-          href="#features"
-          aria-label="查看股神修練院遊戲特色"
-        ><span class="visually-hidden">查看遊戲特色</span></a>
-      </div>
-
-      <!-- Mobile fallback (Option A): real visible CTAs below the image,
-           where baked-in buttons are too small for reliable hotspots. -->
-      <div class="hero-mobile-cta">
-        <a
-          class="btn btn-primary"
-          href="https://reurl.cc/YDRAxl"
-          data-beta-cta
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="參加股神修練院封測"
-        >參加封測</a>
-        <a
-          class="btn btn-ghost"
-          href="#features"
-          aria-label="查看股神修練院遊戲特色"
-        >查看遊戲特色</a>
       </div>
     </section>
 
@@ -298,7 +264,7 @@
         </ol>
 
         <div class="how-cta">
-          <a class="btn btn-primary" href="https://reurl.cc/YDRAxl" data-beta-cta target="_blank" rel="noopener noreferrer">準備好了，前往封測</a>
+          <a class="btn btn-primary" href="https://forms.gle/QdE8Z8xVG24DybPx6" data-beta-cta target="_blank" rel="noopener noreferrer">準備好了，前往封測</a>
         </div>
       </div>
     </section>
@@ -310,7 +276,7 @@
         <p class="eyebrow">封閉測試</p>
         <h2 id="beta-title">準備加入封測了嗎？</h2>
         <p class="beta-copy">目前正在準備 v1.1 封測版本，歡迎協助測試登入流程、股票資料顯示、放置戰鬥體驗與排行榜功能。</p>
-        <a class="btn btn-primary btn-lg" href="https://reurl.cc/YDRAxl" data-beta-cta target="_blank" rel="noopener noreferrer" aria-label="我要參加封測（於新分頁開啟報名表單）">我要參加封測</a>
+        <a class="btn btn-primary btn-lg" href="https://reurl.cc/r0VnKy" data-beta-cta target="_blank" rel="noopener noreferrer" aria-label="我要參加封測（於新分頁開啟報名表單）">我要參加封測</a>
         <p class="beta-note">點擊後將於新分頁開啟封測報名表單。</p>
       </div>
     </section>
